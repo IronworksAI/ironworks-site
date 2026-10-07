@@ -86,19 +86,20 @@ def mark(color: str) -> str:
 
 
 def app_icon() -> str:
-    # iOS-style squircle-ish rounded square, beam at ~56% of the tile.
+    # White tile, black beam. App stores and iOS apply their own corner mask.
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Ironworks">
   <title>Ironworks</title>
-  <rect width="1024" height="1024" rx="230" fill="{INK}"/>
-  <path fill="{WHITE}" transform="translate(512 512) scale(12) translate(-32 -32)" d="{BEAM}"/>
+  <rect width="1024" height="1024" rx="230" fill="{WHITE}"/>
+  <path fill="{INK}" transform="translate(512 512) scale(12) translate(-32 -32)" d="{BEAM}"/>
 </svg>
 '''
 
 
 def favicon() -> str:
+    # White tile with a light edge so it still reads on white browser tabs.
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="{INK}"/>
-  <path fill="{WHITE}" transform="translate(32 32) scale(0.72) translate(-32 -32)" d="{BEAM}"/>
+  <rect x="1" y="1" width="62" height="62" rx="14" fill="{WHITE}" stroke="#DFDFDF" stroke-width="2"/>
+  <path fill="{INK}" transform="translate(32 32) scale(0.72) translate(-32 -32)" d="{BEAM}"/>
 </svg>
 '''
 

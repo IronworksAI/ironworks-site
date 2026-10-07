@@ -309,7 +309,7 @@ function Wallet() {
           </div>
           <div className="relative flex h-full flex-col justify-between p-4">
             <p className="flex items-center gap-1.5 text-[15px] font-semibold">
-              <IronworksAppIcon className="size-6 rounded-[6px] ring-1 ring-on-ink/30" /> Ironworks
+              <IronworksAppIcon className="size-6 rounded-[6px]" /> Ironworks
             </p>
             <div>
               <p className="text-[13px] opacity-80">Arriving in your bank Thursday</p>
