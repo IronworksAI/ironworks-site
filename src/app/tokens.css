@@ -1,0 +1,59 @@
+/* Hallmark · macrostructure: Workbench (studied: Wajo + Pace + Microsoft 365) · tone: plain-spoken, friendly · anchor hue: none (ink on white)
+ * theme: studied-DNA (source: user moodboard images) · paper oklch(100% 0 0) · panel oklch(95.6% 0 0) · font: Figtree, system iOS font inside iPhone-style views
+ * nav: N2-style centered pill nav · footer: Ft2 · enrichment: iPhone-style notifications and app views, job-board product UI, seeded shape-art tiles
+ * Color jobs: ink = text + primary buttons · panel = grey surfaces · money = money in · attn = owed
+ * · confetti-* = stars and the success check only · app and bubble colors = iPhone-style app visuals only
+ * · art-* = shape-art tiles only · slip/tape/sticky/manila = paper artifacts · stamp-* = rubber stamps only
+ * · font-hand (Caveat) = handwriting inside paper artifacts only. No gradients anywhere.
+ */
+@theme {
+  --color-paper: oklch(100% 0 0);
+  --color-panel: oklch(95.6% 0 0);
+  --color-panel-2: oklch(92.5% 0 0);
+  --color-ink: oklch(17% 0 0);
+  --color-ink-2: oklch(42% 0 0);
+  --color-ink-3: oklch(53% 0 0);
+  --color-on-ink: oklch(100% 0 0);
+  --color-line: oklch(90.5% 0 0);
+
+
+  --color-money: oklch(50% 0.13 150);
+  --color-money-soft: oklch(94% 0.05 150);
+  --color-attn: oklch(52% 0.14 50);
+  --color-attn-soft: oklch(95% 0.045 70);
+  --color-focus: oklch(55% 0.17 255);
+
+  --color-confetti-green: oklch(80% 0.18 145);
+  --color-confetti-yellow: oklch(85% 0.14 90);
+
+  --color-app-green: oklch(72% 0.19 148);
+  --color-app-blue: oklch(62% 0.18 255);
+  --color-app-red: oklch(62% 0.22 27);
+  --color-bubble: oklch(62% 0.2 256);
+  --color-bubble-in: oklch(93.5% 0.004 286);
+  --color-ios-green-top: oklch(85% 0.19 145);
+  --color-ios-blue-top: oklch(72% 0.15 240);
+  --color-ios-gray: oklch(57% 0.01 286);
+  --color-ios-fill: oklch(95.5% 0.003 286);
+  --color-ios-sep: oklch(89% 0.004 286);
+
+  --color-art-rust: oklch(58% 0.15 42);
+  --color-art-mint: oklch(94% 0.07 150);
+  --color-art-orchid: oklch(70% 0.16 330);
+  --color-art-ice: oklch(92% 0.07 200);
+  --color-art-forest: oklch(34% 0.07 158);
+  --color-art-blush: oklch(93% 0.035 350);
+  --color-art-cobalt: oklch(52% 0.17 260);
+  --color-art-sun: oklch(86% 0.15 92);
+  --color-art-tomato: oklch(66% 0.19 32);
+
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-ios: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
+
+  --text-display: clamp(2.6rem, 5vw + 0.6rem, 4.5rem);
+  --text-display-s: clamp(2rem, 3vw + 0.7rem, 3.25rem);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in: cubic-bezier(0.55, 0, 1, 0.45);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}

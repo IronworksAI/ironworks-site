@@ -1,69 +1,83 @@
-import Image from "next/image";
+import { AskBox } from "@/components/ask-box";
+import { HandlesIt } from "@/components/handles-it";
+import { Hero } from "@/components/hero";
+import { MoneyCards } from "@/components/money-cards";
+import { JobBoard, Pricing, Rewards, TradesFloat } from "@/components/sections";
+import { SiteFooter, SiteNav } from "@/components/site-chrome";
+import { WaitlistForm } from "@/components/waitlist-form";
+
+const wrap = "mx-auto w-full max-w-[1400px] px-4 sm:px-6";
+const h2 = "text-[length:var(--text-display-s)] font-bold leading-[1.05] tracking-[-0.03em]";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <>
+      <SiteNav />
+      <main id="top" className="flex-1">
+        <Hero />
+
+        <section id="ask" className={`${wrap} scroll-mt-24 py-20 lg:py-28`}>
+          <div className="mx-auto mb-10 flex max-w-3xl flex-col items-center text-center">
+            <h2 className={h2}>Just tell it what you need</h2>
+            <p className="mt-4 text-xl text-ink-2">Type it or say it, like you&apos;d text your office manager.</p>
+          </div>
+          <AskBox />
+        </section>
+
+        <section className={`${wrap} py-20 lg:py-28`}>
+          <HandlesIt />
+        </section>
+
+        <section id="rewards" className={`${wrap} scroll-mt-24 py-20 lg:py-28`}>
+          <Rewards />
+        </section>
+
+        <section id="pricing" className={`${wrap} scroll-mt-24 py-20 lg:py-28`}>
+          <div className="mx-auto mb-14 max-w-2xl text-center">
+            <h2 className={h2}>It&apos;s free. Then it pays you.</h2>
+            <p className="mt-5 text-2xl leading-snug">
+              No monthly fee, ever. A small fee only when a customer pays you, and rewards that put money back in your
+              pocket.
+            </p>
+          </div>
+          <Pricing />
+        </section>
+
+        <section id="flow" className={`${wrap} scroll-mt-24 py-20 lg:py-28`}>
+          <div className="mb-12 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+            <div className="max-w-3xl">
+              <h2 className={h2}>Every job, start to paid</h2>
+              <p className="mt-5 text-xl text-ink-2">
+                Every call, text and email comes into one place. Ironworks takes each job from the first hello to money
+                in your bank, and you can see where every job stands.
+              </p>
+            </div>
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#join"
+              className="inline-flex h-14 shrink-0 items-center self-start whitespace-nowrap rounded-full bg-ink px-8 text-lg font-semibold text-on-ink transition-opacity duration-150 hover:opacity-85 lg:self-auto"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              Join the waitlist
+            </a>
+          </div>
+          <JobBoard />
+        </section>
+
+        <section id="money" className={`${wrap} scroll-mt-24 py-20 lg:py-28`}>
+          <MoneyCards />
+        </section>
+
+        <TradesFloat />
+
+        <section id="join" className={`${wrap} scroll-mt-24 pb-28 pt-12 text-center`}>
+          <h2 className={h2}>Be first in your city</h2>
+          <p className="mx-auto mb-10 mt-5 max-w-xl text-xl text-ink-2">
+            We&apos;re opening one city at a time and setting up every early shop by hand, including moving your customer
+            list over.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          <WaitlistForm />
+        </section>
       </main>
-    </div>
+      <SiteFooter />
+    </>
   );
 }

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Ironworks">
+  <title>Ironworks</title>
+  <rect width="1024" height="1024" rx="230" fill="#111111"/>
+  <path fill="#FFFFFF" transform="translate(512 512) scale(12) translate(-32 -32)" d="M8 8H56V20H44A6 6 0 0 0 38 26V38A6 6 0 0 0 44 44H56V56H8V44H20A6 6 0 0 0 26 38V26A6 6 0 0 0 20 20H8Z"/>
+</svg>
